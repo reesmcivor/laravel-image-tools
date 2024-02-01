@@ -35,7 +35,7 @@ class ImageController extends Controller
      * @param int $height Desired height
      * @return \Illuminate\Http\Response
      */
-    public function resize(Request $request, $image, $width, $height)
+    public function resize(Request $request, string $image, int $width, int $height)
     {
         $image = base64_decode($image);
         $imageName = $this->generateImageName($image, $width, $height);
@@ -56,7 +56,7 @@ class ImageController extends Controller
      */
     protected function generateImageName($image, $width, $height)
     {
-        $imageName = basename(parse_url($image, PHP_URL_PATH));
+        $imageName = Str::slug( basename(parse_url($image, PHP_URL_PATH)), '.');
         return "{$width}x{$height}_{$imageName}";
     }
 
