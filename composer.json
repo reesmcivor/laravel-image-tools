@@ -1,0 +1,27 @@
+{
+  "name": "reesmcivor/laravel-image-tools",
+  "description": "A Laravel package for advanced image manipulation using Imagick.",
+  "type": "library",
+  "require": {
+    "php": "^7.3|^8.0",
+    "ext-imagick": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ReesMcIvor\\ImageTools\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ReesMcIvor\\ImageTools\\ImageToolsServiceProvider"
+      ],
+      "aliases": {
+        "ImageTools": "ReesMcIvor\\ImageTools\\Facades\\ImageTools"
+      }
+    }
+  }
+}
