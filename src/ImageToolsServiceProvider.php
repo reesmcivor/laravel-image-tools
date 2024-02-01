@@ -9,7 +9,7 @@ class ImageToolsServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton('imagetools', function ($app) {
+        $this->app->singleton('ImageTools', function ($app) {
             return new ImageResizer();
         });
 

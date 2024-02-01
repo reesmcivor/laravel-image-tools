@@ -8,6 +8,6 @@ class ImageTools extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'imagetools';
+        return 'ImageTools';
     }
 }
